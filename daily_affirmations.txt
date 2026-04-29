@@ -1,8 +1,30 @@
 # Daily Affirmations Import
 # Paste your daily affirmations here in this format:
-# 1. Your first affirmation
-# 2. Your second affirmation
-# etc.
+# 1. I am grateful for all the money I have received in my life.
+# 2. I am receiving more money every day.
+# 3. I know how to tap the Universal flow of unlimited abundance.
+# 4. I am financially thriving. 
+# 5. Money flows easily to me. 
+# 6. I spend money wisely. 
+# 7. I have more than enough money. 
+# 8. I have more than enough. 
+# 9. I am open to financial freedom. 
+# 10. I always have enough money for everything I want to do in this life.
+# 11. Thank you for the wealth I once longed for. 
+# 12. I am becoming more abundant by the day. 
+# 13. Money comes to me from many sources. 
+# 14. I don't need to be wealthy to be happy but I need to be happy in order to become wealthy. 
+# 15. I have the money to cover all my financial obligations - now and forever more. 
+# 16. I can see money flowing to me. 
+# 17. I choose prosperity. 
+# 18. I am becoming richer by the second. 
+# 19. I wish good fortune and happiness for myself, and everyone.
+# 20. I am receiving more money today. 
+# 21. I know everything I need to know to be wealthy NOW. 
+# 22. I am using money to bless my life and other people's lives. 
+# 23. Of course I can be financially free. 
+# 24. Can I achieve financial freedom? Yes I can. 
+# 25. I love money and money loves me. 
 
 # Example:
 # 1. I am worthy of unlimited abundance
@@ -10,9 +32,10 @@
 # 3. I attract prosperity in every area of my life
 
 # Today's affirmations (replace with your daily list):
-1. I am worthy of unlimited abundance
-2. Money flows to me effortlessly
-3. I attract prosperity in every area of my life
-4. Wealth is my natural state of being
-5. I am a magnet for financial success
 
+# --- Added to templates on 2026-04-29 ---
+# 1. I am worthy of unlimited abundance
+# 2. Money flows to me effortlessly
+# 3. I attract prosperity in every area of my life
+# 4. Wealth is my natural state of being
+# 5. I am a magnet for financial success
