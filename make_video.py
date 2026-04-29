@@ -263,7 +263,7 @@ def main():
     print(f"  Video: {out_mp4.stat().st_size/1024/1024:.0f} MB → {out_mp4}")
 
     # Save metadata
-    meta = {"title": template["title"], "description": template.get("description", ""), "tags": template.get("seo_keywords", []), "filename": template_map[idx], "video_path": str(out_mp4)}
+    meta = {"title": template["title"], "description": template.get("description", ""), "tags": template.get("seo_keywords", []), "filename": template_map[idx], "video_path": str(out_mp4), "privacyStatus": "private"}
     (OUT_DIR / "metadata.json").write_text(json.dumps(meta))
     print(f"\nDone! Metadata saved to {OUT_DIR}/metadata.json")
 
