@@ -1,0 +1,198 @@
+/* YouTube Channel Setup & Optimization Guide */
+
+{
+  "channel_name": "Sleep Money Affirmations",
+  "channel_description": "Powerful sleep affirmations for financial abundance, wealth manifestation, and prosperity consciousness. Listen while you sleep and reprogram your subconscious mind for unlimited money and success.",
+  "channel_keywords": [
+    "sleep affirmations",
+    "money affirmations",
+    "wealth manifestation",
+    "sleep meditation",
+    "abundance affirmations",
+    "financial freedom",
+    "manifestation",
+    "subconscious reprogramming"
+  ],
+  "channel_setup": {
+    "profile_picture": {
+      "description": "Clean, professional, calming",
+      "suggestions": "Mandala with gold/purple colors, or moon + money symbol outline"
+    },
+    "banner_art": {
+      "dimensions": "2560x1440px",
+      "description": "Star-filled night sky with moon, optional dollar signs or prosperity imagery",
+      "style": "Calming, luxurious, meditative"
+    },
+    "about_section": {
+      "headline": "Transform Your Relationship With Money While You Sleep 💰🌙",
+      "full_description": "Welcome to Sleep Money Affirmations! 🌟\n\nWe create powerful 8-hour sleep affirmations designed to reprogram your subconscious mind for unprecedented financial abundance and prosperity.\n\n✨ What You'll Find Here:\n→ Money & wealth manifestation affirmations\n→ Financial freedom & debt elimination content\n→ Success & career growth sleep videos\n→ Abundance mindset programming\n→ Deep sleep meditation with affirmations\n\n💎 Why Sleep Affirmations Work:\nYour subconscious mind is most receptive while you sleep. These affirmations work directly with your deeper beliefs about money, helping you naturally attract financial abundance and opportunities.\n\n🎯 How to Use:\n1. Play our videos as you fall asleep\n2. Use headphones or speaker at comfortable volume\n3. Listen consistently for best results\n4. Many experience shifts within 21-30 days\n\n✓ All videos feature:\n✓ Professional, calming narration\n✓ Royalty-free background music\n✓ Scientifically-backed affirmations\n✓ 8-16 hours of content\n✓ Beautiful visual accompaniment\n\n🙏 Join thousands transforming their financial reality\n\n★ Hit SUBSCRIBE & turn on notifications ★\n★ Like videos that resonate with you ★\n★ Share to help others manifest abundance ★\n\nLet's reprogram for prosperity together! 🚀💰"
+    },
+    "contact_info": {
+      "business_email": "[your-email@gmail.com]",
+      "location": "[Your Location or 'Online']"
+    }
+  },
+  "playlist_strategy": {
+    "playlists": [
+      {
+        "name": "💰 Money Affirmations [COMPLETE SLEEP SERIES]",
+        "description": "8-hour affirmations for financial abundance - full sleep series",
+        "tags": ["financial", "abundance", "8-hour", "sleep"]
+      },
+      {
+        "name": "🚀 Rapid Wealth Manifestation (Reader's Choice)",
+        "description": "Most popular money affirmations videos",
+        "tags": ["bestsellers", "trending", "manifestation"]
+      },
+      {
+        "name": "💎 Abundance Mindset Reprogramming",
+        "description": "Transform your beliefs about money",
+        "tags": ["mindset", "subconscious", "beliefs"]
+      },
+      {
+        "name": "🏦 Debt Elimination & Financial Freedom",
+        "description": "Release debt stress and attract financial peace",
+        "tags": ["debt-free", "freedom", "peace"]
+      },
+      {
+        "name": "🎯 Career Success & Income Growth",
+        "description": "Affirmations for business and career advancement",
+        "tags": ["success", "career", "entrepreneurship"]
+      },
+      {
+        "name": "😴 Sleep Meditation with Money Affirmations",
+        "description": "Relaxation + wealth programming for deep sleep",
+        "tags": ["meditation", "sleep", "relaxation"]
+      }
+    ]
+  },
+  "monetization_settings": {
+    "adsense": {
+      "status": "Enable once eligible (1K subs + 4K watch hours)",
+      "ad_formats": ["skippable_in_stream", "non_skippable_in_stream", "bumper_ads"]
+    },
+    "channel_memberships": {
+      "status": "Enable after 1K subscribers",
+      "tiers": [
+        {
+          "level": "Prosperity Supporter",
+          "price": 0.99,
+          "benefits": ["Early access to new affirmations", "Custom affirmation requests"]
+        },
+        {
+          "level": "Abundance Creator",
+          "price": 4.99,
+          "benefits": [
+            "All tier 1 benefits",
+            "Monthly wealth journal template",
+            "Private Discord community"
+          ]
+        }
+      ]
+    },
+    "super_chat": {
+      "status": "Enable",
+      "messaging": "Share gratitude stories and manifestation wins!"
+    },
+    "merchandise": {
+      "suggestions": [
+        "Sleep mask with channel branding",
+        "Manifestation journal",
+        "Affirmation cards deck",
+        "Guided meditation workbook"
+      ]
+    }
+  },
+  "seo_optimization": {
+    "video_title_formula": "[LENGTH] Sleep Affirmations for [THEME] | Money & Abundance Manifestation",
+    "video_title_examples": [
+      "8-Hour Sleep Affirmations for Money | Financial Abundance Manifestation",
+      "Sleep Meditation - Attract Wealth While You Sleep | Money Affirmations",
+      "Subconscious Reprogramming | Sleep Affirmations for Prosperity & Abundance"
+    ],
+    "hashtag_strategy": [
+      "#SleepAffirmations",
+      "#MoneyAffirmations",
+      "#Wealth",
+      "#Manifestation",
+      "#SleepMeditation",
+      "#Abundance",
+      "#FinancialFreedom",
+      "#AffirmationsSleep"
+    ],
+    "description_structure": "Use template from templates/financial_abundance_8hr.json - includes keywords, benefits, calls-to-action",
+    "thumbnail_design": {
+      "font": "Bold, clean, readable",
+      "colors": "Gold, purple, white, or dark blue with bright text",
+      "imagery": "Moon, stars, money symbols, peaceful scenes",
+      "text": "Main benefit (e.g., '$$ MONEY SLEEP', 'WEALTH AFFIRMATIONS')"
+    }
+  },
+  "growth_strategies": {
+    "shorts_strategy": {
+      "frequency": "2-3 Shorts per week",
+      "duration": "30-60 seconds",
+      "content": "Key affirmations from full videos, teaser clips",
+      "seo": "#Shorts #MoneyAffirmations #Manifestation"
+    },
+    "community_engagement": {
+      "comment_response": "Reply to 100% of comments in first 24 hours",
+      "community_posts": "2-3x per week - affirmation tips, asks for feedback",
+      "stories": "Share subscriber manifestation wins & testimonials"
+    },
+    "collaboration": {
+      "target_channels": ["meditation channels", "manifestation coaches", "self-help creators"],
+      "content_ideas": ["Duets with popular affirmation creators", "Guest affirmations"]
+    },
+    "cross_promotion": {
+      "tiktok": "30-60 second clips from full videos",
+      "instagram": "Reels + stories with daily affirmations",
+      "spotify": "Upload audio-only versions as podcast",
+      "reddit": "Share in r/manifestation, r/meditation, r/sleep communities"
+    }
+  },
+  "analytics_tracking": {
+    "key_metrics": [
+      "Average watch duration (target: 30+ minutes per session)",
+      "Click-through rate on descriptions (affiliate links)",
+      "Subscriber growth rate",
+      "Playlist additions",
+      "Share rate (indication of value)"
+    ],
+    "success_goals_6_months": {
+      "subscribers": "50K",
+      "monthly_views": "500K+",
+      "watch_hours": "100K+",
+      "revenue": "$2,000-5,000"
+    },
+    "success_goals_1_year": {
+      "subscribers": "250K",
+      "monthly_views": "2M+",
+      "watch_hours": "500K+",
+      "revenue": "$15,000-50,000"
+    }
+  },
+  "consistency_checklist": {
+    "before_launch": [
+      "☐ Channel branding complete (banner, profile pic, description)",
+      "☐ First 10 videos uploaded and scheduled",
+      "☐ Playlist structure created",
+      "☐ Social media accounts created (TikTok, Instagram)",
+      "☐ Affiliate programs set up (meditation apps, manifestation books)",
+      "☐ Tag all videos with consistent keywords"
+    ],
+    "weekly": [
+      "☐ Upload video (consistent day/time)",
+      "☐ Create 2-3 Shorts for cross-promotion",
+      "☐ Post 2-3 community posts or engagement updates",
+      "☐ Respond to all comments",
+      "☐ Engage with similar channels (like/comment on their videos)"
+    ],
+    "monthly": [
+      "☐ Analyze top-performing content",
+      "☐ Review analytics and adjust strategy",
+      "☐ Plan content for next month",
+      "☐ Reach out to potential collaboration partners"
+    ]
+  }
+}

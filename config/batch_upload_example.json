@@ -1,0 +1,72 @@
+{
+  "videos": [
+    {
+      "file": "output_videos/financial_abundance_01.mp4",
+      "metadata": {
+        "title": "8-Hour Sleep Affirmations for Money | Financial Abundance Manifestation",
+        "description": "🌙 8-HOUR SLEEP MONEY AFFIRMATIONS 💰\n\nListen to these powerful money affirmations while you sleep and reprogram your subconscious mind for unlimited wealth and abundance.\n\n✨ This audio features:\n✓ Calming affirmations for financial abundance\n✓ Wealth manifestation while you sleep\n✓ Subconscious reprogramming for success\n✓ Relaxing background music & nature sounds\n✓ Perfect for deep sleep & lucid dreaming\n\n🎯 Best Results:\n→ Use headphones or speakers\n→ Play on loop throughout the night\n→ Wake feeling refreshed and prosperous\n→ Listen for 21 days to reprogram beliefs\n\n💎 Affirmations included:\n- Money flows to me easily\n- I am a magnet for abundance\n- Financial freedom is mine\n- I attract unlimited wealth\n- Prosperity surrounds me\n\n★ NO COPYRIGHT MUSIC - Sleep Soundly\n★ 8 HOURS of Pure Abundance Energy\n★ Perfect for Manifestation & Meditation\n\n#SleepAffirmations #MoneyAffirmations #Abundance #Manifestation #Sleep",
+        "tags": [
+          "sleep affirmations",
+          "money affirmations",
+          "financial abundance",
+          "wealth manifestation",
+          "sleep meditation",
+          "abundance affirmations",
+          "8 hour sleep",
+          "positive affirmations",
+          "subconscious reprogramming",
+          "manifestation",
+          "financial freedom"
+        ],
+        "categoryId": "22",
+        "privacyStatus": "public"
+      },
+      "publish_time": null,
+      "notes": "Financial abundance theme - introductory video"
+    },
+    {
+      "file": "output_videos/debt_freedom_01.mp4",
+      "metadata": {
+        "title": "Sleep Affirmations for Debt Elimination | Financial Freedom 8-Hour",
+        "description": "🌙 DEBT ELIMINATION SLEEP AFFIRMATIONS 🏦\n\nRelease financial stress and attract freedom from debt while you sleep.\n\n✨ Features:\n✓ Powerful debt release affirmations\n✓ Financial peace & freedom programming\n✓ Subconscious wealth mindset shifting\n✓ Calming sleep meditation\n\n💎 Affirmations included:\n- I am breaking free from debt\n- Financial freedom flows through me\n- My debts dissolve and disappear\n- I am wealthy and free\n- Every day brings financial peace\n\n🎯 Perfect for:\n✓ Debt stress relief\n✓ Money management reprogramming\n✓ Financial peace of mind\n✓ Deep, restorative sleep\n\n#DebtFree #FinancialFreedom #AffirmationsSleep #Manifestation",
+        "tags": [
+          "debt elimination affirmations",
+          "financial freedom",
+          "debt-free affirmations",
+          "sleep affirmations money",
+          "manifest money",
+          "subconscious wealth"
+        ],
+        "categoryId": "22",
+        "privacyStatus": "public"
+      },
+      "publish_time": null,
+      "notes": "Debt elimination theme"
+    },
+    {
+      "file": "output_videos/success_career_01.mp4",
+      "metadata": {
+        "title": "Career Success & Income Growth Sleep Affirmations | 8-Hour Manifestation",
+        "description": "🌙 SUCCESS & CAREER SLEEP AFFIRMATIONS 🚀\n\nAttract career advancement and income growth while you sleep.\n\n✨ Features:\n✓ Powerful career success affirmations\n✓ Income growth programming\n✓ Entrepreneurship & business mindset\n✓ Confidence & leadership building\n\n💎 Affirmations included:\n- My career is growing and flourishing\n- I attract success effortlessly\n- My income is rapidly increasing\n- I am a successful entrepreneur\n- Opportunities find me\n\n🎯 Perfect for:\n✓ Career advancement seekers\n✓ Entrepreneurs & business owners\n✓ Income increase goals\n✓ Leadership confidence building\n\n#CareerSuccess #Entrepreneurship #SuccessAffirmations #Manifestation",
+        "tags": [
+          "success affirmations",
+          "career growth",
+          "income manifestation",
+          "entrepreneurship affirmations",
+          "business success",
+          "confidence affirmations"
+        ],
+        "categoryId": "22",
+        "privacyStatus": "public"
+      },
+      "publish_time": null,
+      "notes": "Career/success theme"
+    }
+  ],
+  "batch_settings": {
+    "upload_interval_hours": 48,
+    "start_date": "2026-04-28",
+    "start_time": "20:00",
+    "timezone": "America/New_York"
+  }
+}

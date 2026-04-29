@@ -1,0 +1,32 @@
+{
+  "categories": {
+    "financial": [
+      "I am worthy of unlimited abundance",
+      "Money flows to me effortlessly",
+      "I attract prosperity in every area of my life",
+      "Wealth is my natural state of being",
+      "I am a magnet for financial success"
+    ],
+    "success": [],
+    "debt_free": [],
+    "abundance": [],
+    "general": []
+  },
+  "daily_imports": [
+    {
+      "date": "2026-04-27T11:37:29.559966",
+      "source": "file_import_daily_affirmations.txt",
+      "category": "financial",
+      "count": 5,
+      "affirmations": [
+        "I am worthy of unlimited abundance",
+        "Money flows to me effortlessly",
+        "I attract prosperity in every area of my life",
+        "Wealth is my natural state of being",
+        "I am a magnet for financial success"
+      ]
+    }
+  ],
+  "last_updated": "2026-04-27T11:37:29.559975",
+  "total_affirmations": 5
+}

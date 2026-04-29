@@ -1,0 +1,18 @@
+# Daily Affirmations Import
+# Paste your daily affirmations here in this format:
+# 1. Your first affirmation
+# 2. Your second affirmation
+# etc.
+
+# Example:
+# 1. I am worthy of unlimited abundance
+# 2. Money flows to me effortlessly
+# 3. I attract prosperity in every area of my life
+
+# Today's affirmations (replace with your daily list):
+1. I am worthy of unlimited abundance
+2. Money flows to me effortlessly
+3. I attract prosperity in every area of my life
+4. Wealth is my natural state of being
+5. I am a magnet for financial success
+

@@ -1,0 +1,11 @@
+output_videos/
+*.mp4
+*.mp3
+*.aac
+*.aiff
+*.wav
+config/token.pickle
+config/client_secrets.json
+__pycache__/
+*.pyc
+.DS_Store
