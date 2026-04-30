@@ -6,6 +6,7 @@ output_videos/
 *.wav
 config/token.pickle
 config/client_secrets.json
+config/token.json
 __pycache__/
 *.pyc
 .DS_Store
