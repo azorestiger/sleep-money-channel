@@ -260,7 +260,8 @@ def main():
         "-loop", "1", "-i", str(sf),
         "-i", str(voice_aac), "-i", str(music_aac),
         "-filter_complex",
-        f"[0:v]ass={ass_path}:fontsdir=/tmp[vout];"
+        f"[0:v]scale=3840:2160,zoompan=z='1.2+0.1*sin(3.14159*on/600)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s=1920x1080:fps=5[bg];"
+        f"[bg]ass={ass_path}:fontsdir=/tmp[vout];"
         f"[1:a][2:a]amix=inputs=2:weights=0.55 0.55:normalize=0[aout]",
         "-map", "[vout]", "-map", "[aout]",
         "-c:v", "libx264", "-preset", "ultrafast", "-crf", "33", "-r", "5",
