@@ -8,7 +8,7 @@ Generates an 8-hour sleep affirmations video with:
   - 432Hz binaural ambient background music
   - 55% voice / 55% music mix
   - 5fps, 1920x1080, 8 hours
-Usage: python3 make_video.py [--index 0|1|2]
+Usage: python3 make_video.py [--index 0|1|2|3|4]
 """
 
 import argparse, base64, json, math, os, random, subprocess, time, urllib.request
@@ -173,8 +173,15 @@ def main():
     args = parser.parse_args()
 
     # Load template
-    template_map = {0: "financial_abundance_8hr.json", 1: "debt_freedom_8hr.json", 2: "success_career_8hr.json"}
-    idx = args.index if args.index is not None else date.today().isocalendar()[1] % 3
+    template_map = {
+        0: "success_career_8hr.json",
+        1: "financial_abundance_8hr.json",
+        2: "debt_freedom_8hr.json",
+        3: "gratitude_manifestation_8hr.json",
+        4: "health_vitality_abundance_8hr.json",
+    }
+    # Rotate through 5 templates based on day of week (Mon=0 ... Fri=4)
+    idx = args.index if args.index is not None else date.today().weekday() % 5
     template_path = REPO_DIR / "templates" / template_map[idx]
     template = json.loads(template_path.read_text())
     print(f"Template {idx}: {template['title']}")

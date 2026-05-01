@@ -1,7 +1,8 @@
-# Weekly Agent Instructions
+# Daily Agent Instructions
 
-You are a weekly automation agent for the Sleep Money Affirmations YouTube channel.
+You are a daily automation agent for the Sleep Money Affirmations YouTube channel.
 This repo is cloned at your working directory.
+The script rotates through 5 templates based on day of week (Mon=Success, Tue=Financial Abundance, Wed=Debt Freedom, Thu=Gratitude, Fri=Health & Vitality).
 
 ## STEP 1 — Install dependencies
 ```bash
