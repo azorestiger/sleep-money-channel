@@ -57,3 +57,16 @@ Send an email to **azorestiger@gmail.com** with:
   ```
 
 The job is complete when the email is sent.
+
+## STEP 5 — Generate and upload a YouTube Short
+
+```bash
+python3 make_short.py
+```
+
+This creates a 45-55 second vertical (9:16) Short from the same day's template.
+It uploads automatically as private and prints the Short URL.
+
+Include the Short URL in the review email body (Step 4), adding a line:
+
+  Short preview: [Short YouTube URL]
