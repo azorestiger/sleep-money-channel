@@ -254,14 +254,30 @@ def main():
 
     # 7. Encode
     print("\n[7/7] Encoding final video (8hr @ 5fps)...")
-    out_mp4 = OUT_DIR / template_map[idx]
+    out_mp4 = OUT_DIR / template_map[idx].replace(".json", ".mp4")
+
+    # Pre-render a 2-minute animated starfield loop (600 frames at 5fps)
+    # then loop it for the full 8-hour encode — much faster than per-frame zoompan on 144k frames
+    bg_loop = OUT_DIR / "bg_loop.mp4"
+    print("  Pre-rendering 2-min animated starfield loop...")
     subprocess.run([
         FFMPEG, "-y",
         "-loop", "1", "-i", str(sf),
+        "-filter_complex",
+        "[0:v]zoompan=z='1.15+0.1*sin(3.14159*on/150)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s=1920x1080:fps=5[bg]",
+        "-map", "[bg]",
+        "-c:v", "libx264", "-preset", "ultrafast", "-crf", "18", "-t", "120",
+        str(bg_loop)
+    ], check=True, capture_output=True)
+    print(f"  Loop: {bg_loop.stat().st_size/1024/1024:.0f} MB")
+
+    print("  Encoding 8-hour video with looped background + subtitles...")
+    subprocess.run([
+        FFMPEG, "-y",
+        "-stream_loop", "-1", "-i", str(bg_loop),
         "-i", str(voice_aac), "-i", str(music_aac),
         "-filter_complex",
-        f"[0:v]scale=3840:2160,zoompan=z='1.2+0.1*sin(3.14159*on/600)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s=1920x1080:fps=5[bg];"
-        f"[bg]ass={ass_path}:fontsdir=/tmp[vout];"
+        f"[0:v]ass={ass_path}:fontsdir=/tmp[vout];"
         f"[1:a][2:a]amix=inputs=2:weights=0.55 0.55:normalize=0[aout]",
         "-map", "[vout]", "-map", "[aout]",
         "-c:v", "libx264", "-preset", "ultrafast", "-crf", "33", "-r", "5",
@@ -271,7 +287,7 @@ def main():
     print(f"  Video: {out_mp4.stat().st_size/1024/1024:.0f} MB → {out_mp4}")
 
     # Save metadata
-    meta = {"title": template["title"], "description": template.get("description", ""), "tags": template.get("seo_keywords", []), "filename": template_map[idx], "video_path": str(out_mp4), "privacyStatus": "private"}
+    meta = {"title": template["title"], "description": template.get("description", ""), "tags": template.get("seo_keywords", []), "filename": template_map[idx].replace(".json", ".mp4"), "video_path": str(out_mp4), "privacyStatus": "private"}
     (OUT_DIR / "metadata.json").write_text(json.dumps(meta))
     print(f"\nDone! Metadata saved to {OUT_DIR}/metadata.json")
 
