@@ -85,11 +85,21 @@ def build_chunks(template: dict) -> list:
     return sections
 
 
-def group_3words(words: list) -> list:
-    lines = []
-    for i in range(0, len(words), 3):
-        chunk = words[i:i+3]
-        lines.append((" ".join(w for w, _, _ in chunk), chunk[0][1], chunk[-1][2]))
+def group_by_sentence(words: list) -> list:
+    """Group words into full sentence subtitle entries (one affirmation per line)."""
+    lines, current, start = [], [], None
+    for word, s, e in words:
+        if start is None:
+            start = s
+        current.append(word)
+        if word.rstrip(".,!?").endswith((".", "!", "?")):
+            lines.append((" ".join(current), start, e))
+            current, start = [], None
+        elif word.endswith("."):
+            lines.append((" ".join(current), start, e))
+            current, start = [], None
+    if current:
+        lines.append((" ".join(current), start, words[-1][2]))
     return lines
 
 
@@ -107,7 +117,7 @@ def build_ass(all_lines: list, out: Path, font_name: str = "Cormorant Garamond S
         "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, "
         "Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, "
         "Alignment, MarginL, MarginR, MarginV, Encoding\n"
-        f"Style: Default,{font_name},78,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,"
+        f"Style: Default,{font_name},62,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,"
         "0,1,0,0,100,100,2,0,1,2,0,5,20,20,0,1\n"
         f"Style: Watermark,{font_name},26,&H4DFFFFFF,&H000000FF,&H00000000,&H00000000,"
         "0,0,0,0,100,100,0,0,1,1,0,2,10,10,40,1\n\n"
@@ -192,7 +202,7 @@ def main():
     intro_bytes, intro_words = tts_with_timestamps(GUIDED_INTRO, VOICE_INTRO)
     intro_mp3.write_bytes(intro_bytes)
     intro_dur = get_duration(intro_mp3)
-    intro_lines = group_3words(intro_words)
+    intro_lines = group_by_sentence(intro_words)
     print(f"  {intro_dur:.1f}s, {len(intro_lines)} subtitle lines")
 
     # 2. Affirmation chunks
@@ -207,7 +217,7 @@ def main():
         for w, s, e in words: all_words.append((w, s + cumulative, e + cumulative))
         cumulative += dur; seg_files.append(cf)
         time.sleep(0.3)
-    seg_lines = group_3words(all_words)
+    seg_lines = group_by_sentence(all_words)
     print(f"  Segment: {cumulative:.1f}s, {len(seg_lines)} subtitle lines")
 
     # 3. Build 8-hour audio
