@@ -153,14 +153,14 @@ def get_duration(path):
 
 def encode_short(sf, audio_mp3, ass_path, out_mp4, duration):
     import shutil
-    shutil.copy(str(FONT_FILE), "/tmp/CormorantGaramond.ttf")
+    Path("/tmp/cg_fonts").mkdir(exist_ok=True); shutil.copy(str(FONT_FILE), "/tmp/cg_fonts/CormorantGaramond.ttf")
     subprocess.run([
         FFMPEG, "-y",
         "-loop", "1", "-i", str(sf),
         "-i", str(audio_mp3),
         "-filter_complex",
         f"[0:v]scale=2160:3840,zoompan=z='1.55+0.25*sin(3.14159*on/60)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s=1080x1920:fps=24[bg];"
-        f"[bg]ass={ass_path}:fontsdir=/tmp[vout]",
+        f"[bg]ass={ass_path}:fontsdir=/tmp/cg_fonts[vout]",
         "-map", "[vout]", "-map", "1:a",
         "-c:v", "libx264", "-preset", "fast", "-crf", "23", "-pix_fmt", "yuv420p",
         "-c:a", "aac", "-b:a", "128k",

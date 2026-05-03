@@ -255,7 +255,7 @@ def main():
             if abs_s >= loop_end: break
             all_lines.append((text, abs_s, min(e + offset, loop_end)))
     # Copy font to /tmp for fontsdir
-    import shutil; font_tmp = Path("/tmp/CormorantGaramond.ttf"); shutil.copy(str(FONT_FILE), str(font_tmp))
+    import shutil; font_dir = Path("/tmp/cg_fonts"); font_dir.mkdir(exist_ok=True); shutil.copy(str(FONT_FILE), str(font_dir / "CormorantGaramond.ttf"))
     build_ass(all_lines, ass_path)
 
     # 6. Starfield
@@ -287,7 +287,7 @@ def main():
         "-stream_loop", "-1", "-i", str(bg_loop),
         "-i", str(voice_aac), "-i", str(music_aac),
         "-filter_complex",
-        f"[0:v]ass={ass_path}:fontsdir=/tmp[vout];"
+        f"[0:v]ass={ass_path}:fontsdir=/tmp/cg_fonts[vout];"
         f"[1:a][2:a]amix=inputs=2:weights=0.55 0.55:normalize=0[aout]",
         "-map", "[vout]", "-map", "[aout]",
         "-c:v", "libx264", "-preset", "ultrafast", "-crf", "33", "-r", "5",
