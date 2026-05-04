@@ -45,10 +45,14 @@ def add_to_template(template_path: Path, affirmations: list):
     for section in data["sections"]:
         if section.get("section_name") == SECTION_NAME:
             existing = section.get("affirmations", [])
-            # Avoid duplicates
+            # Avoid duplicates — normalize punctuation/apostrophes/case before comparing
+            def normalize(s):
+                return re.sub(r"['’‘\s]+", " ", s).lower().strip().rstrip(".")
+            existing_normalized = {normalize(e) for e in existing}
             for a in affirmations:
-                if a not in existing:
+                if normalize(a) not in existing_normalized:
                     existing.append(a)
+                    existing_normalized.add(normalize(a))
             section["affirmations"] = existing
             print(f"  Updated existing '{SECTION_NAME}' section → {len(existing)} affirmations total")
             template_path.write_text(json.dumps(data, indent=2))
