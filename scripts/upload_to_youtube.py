@@ -6,7 +6,8 @@ Handles large files via resumable upload. Uploads as private for review.
 Usage: python3 scripts/upload_to_youtube.py --video path/to/video.mp4 --metadata path/to/metadata.json
 """
 
-import argparse, json, time
+import argparse, json, socket, time
+socket.setdefaulttimeout(120)  # 2-min timeout prevents hung connections
 from pathlib import Path
 from google.oauth2.credentials import Credentials
 from google.auth.transport.requests import Request
@@ -54,10 +55,21 @@ def upload_video(video_path: str, title: str, description: str, tags: list,
     print(f"File: {video_path} ({Path(video_path).stat().st_size / 1024 / 1024:.0f} MB)")
 
     response = None
+    retries = 0
+    max_retries = 10
     while response is None:
-        status, response = request.next_chunk()
-        if status:
-            print(f"  Progress: {int(status.progress() * 100)}%")
+        try:
+            status, response = request.next_chunk()
+            if status:
+                print(f"  Progress: {int(status.progress() * 100)}%")
+            retries = 0
+        except Exception as e:
+            retries += 1
+            if retries > max_retries:
+                raise
+            wait = min(2 ** retries, 60)
+            print(f"  Retrying in {wait}s (attempt {retries}/{max_retries})...")
+            time.sleep(wait)
 
     video_id = response["id"]
     url = f"https://www.youtube.com/watch?v={video_id}"
