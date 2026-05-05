@@ -290,7 +290,7 @@ def main():
         f"[0:v]ass={ass_path}:fontsdir=/tmp/cg_fonts[vout];"
         f"[1:a][2:a]amix=inputs=2:weights=0.55 0.55:normalize=0[aout]",
         "-map", "[vout]", "-map", "[aout]",
-        "-c:v", "libx264", "-preset", "ultrafast", "-crf", "33", "-r", "5",
+        "-c:v", "libx264", "-preset", "ultrafast", "-crf", "40", "-r", "1",
         "-c:a", "aac", "-b:a", "128k",
         "-t", str(DURATION), "-shortest", str(out_mp4)
     ], check=True)
